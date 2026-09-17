@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff3d6, #ffe0a3, #fff7e6);
+    color: #4a2600;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background: #ff8c00;
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.start-screen {
+    min-height: 100vh;
+    padding: 140px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ganesha {
+    font-size: 90px;
+    animation: floatGanesha 2s infinite ease-in-out;
+}
+
+.start-screen h1 {
+    font-size: 45px;
+    margin: 15px 0;
+    line-height: 1.2;
+    color: #d35400;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #8e4400;
+}
+
+.story {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 25px;
+}
+
+.story-screen {
+    display: none;
+    min-height: 100vh;
+    padding: 70px 25px;
+    animation: fadeIn 0.8s ease;
+}
+
+.story-screen h2 {
+    font-size: 38px;
+    color: #d35400;
+}
+
+.story-screen p {
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.story-screen h3 {
+    margin: 30px 0;
+    font-size: 22px;
+}
+
+.level1-screen {
+    display: none;
+    min-height: 100vh;
+    padding: 50px 20px;
+    animation: fadeIn 0.8s ease;
+}
+
+.level1-screen h2 {
+    font-size: 34px;
+    color: #c0392b;
+}
+
+.level1-screen h3 {
+    font-size: 22px;
+}
+
+.flowers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+.flower {
+    font-size: 48px;
+    background: white;
+    border: 3px solid #ffd27f;
+    border-radius: 20px;
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.flower:hover {
+    transform: translateY(-8px) rotate(5deg) scale(1.1);
+    background: #fff8e8;
+}
+
+#flowerMessage {
+    font-size: 21px;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+.level2-screen {
+    display: none;
+    min-height: 100vh;
+    padding: 50px 20px;
+    animation: fadeIn 0.8s ease;
+}
+
+.level2-screen h2 {
+    font-size: 34px;
+    color: #d35400;
+}
+
+.level2-screen h3 {
+    font-size: 22px;
+}
+
+.modak-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+.modak {
+    font-size: 48px;
+    background: white;
+    border: 3px solid #ffd27f;
+    border-radius: 20px;
+    padding: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.modak:hover {
+    transform: translateY(-8px) rotate(-5deg) scale(1.1);
+    background: #fff8e8;
+}
+
+#modakMessage {
+    font-size: 21px;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+.level3-screen {
+    display: none;
+    min-height: 100vh;
+    padding: 50px 20px;
+    animation: fadeIn 0.8s ease;
+}
+
+.level3-screen h2 {
+    font-size: 34px;
+    color: #8e4400;
+}
+
+.level3-screen h3 {
+    font-size: 22px;
+}
+
+.puja-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+.puja-item {
+    font-size: 22px;
+    background: white;
+    border: 3px solid #ffd27f;
+    border-radius: 20px;
+    padding: 22px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.puja-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: #fff8e8;
+}
+
+#pujaMessage {
+    font-size: 21px;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+.final-screen {
+    display: none;
+    min-height: 100vh;
+    padding: 60px 20px;
+    animation: fadeIn 1s ease;
+}
+
+.ganesha-final {
+    font-size: 100px;
+    animation: celebrate 1.5s infinite ease-in-out;
+}
+
+.final-screen h1 {
+    font-size: 42px;
+    color: #d35400;
+    margin: 20px 0;
+}
+
+.final-screen h2 {
+    font-size: 27px;
+}
+
+.bappa {
+    font-size: 30px;
+    font-weight: bold;
+    color: #c0392b;
+    margin: 30px 0;
+}
+
+.final-screen p {
+    font-size: 21px;
+}
+
+.stars {
+    font-size: 40px;
+    margin: 30px;
+    animation: stars 1.5s infinite ease-in-out;
+}
+
+#playAgainBtn {
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+@keyframes floatGanesha {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes celebrate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15) rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes stars {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .start-screen {
+        padding: 50px 15px;
+    }
+
+    .ganesha {
+        font-size: 70px;
+    }
+
+    .start-screen h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .story {
+        font-size: 16px;
+    }
+
+    .story-screen h2,
+    .level1-screen h2,
+    .level2-screen h2,
+    .level3-screen h2 {
+        font-size: 27px;
+    }
+
+    .flower,
+    .modak {
+        font-size: 40px;
+        padding: 14px;
+    }
+
+    .puja-item {
+        font-size: 18px;
+        padding: 18px;
+    }
+
+    .final-screen h1 {
+        font-size: 30px;
+    }
+
+    .final-screen h2 {
+        font-size: 22px;
+    }
+
+    .bappa {
+        font-size: 24px;
+    }
+
+    .ganesha-final {
+        font-size: 75px;
+    }
+}
+
+/* GAME INFO */
+
+.game-info {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    width: 90%;
+    max-width: 420px;
+}
+
+.level-progress {
+    margin-left: 20px;
+}
+
+/* ================================
+   PROGRESS BAR
+================================ */
+
+.progress-container {
+    width: 220px;
+    height: 12px;
+    background: #eeeeee;
+    border-radius: 20px;
+    margin: 10px auto 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #ff8c00;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+/* ================================
+   TIMER
+================================ */
+
+#timer {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 5px 10px;
+    background: #fff3d6;
+    border-radius: 10px;
+    color: #d35400;
+    font-weight: bold;
+    min-width: 35px;
+}
+
+/* ================================
+   GAME ANIMATIONS
+================================ */
+
+/* Screen entrance */
+.story-screen,
+.level1-screen,
+.level2-screen,
+.level3-screen {
+    animation: screenIn 0.7s ease;
+}
+
+@keyframes screenIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Flower animation */
+.flower {
+    animation: flowerFloat 2s ease-in-out infinite;
+}
+
+.flower:active {
+    animation: flowerCollect 0.4s ease;
+}
+
+@keyframes flowerCollect {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4) rotate(15deg);
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0.4;
+    }
+}
+
+@keyframes flowerFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* Modak animation */
+.modak {
+    animation: modakBounce 1.8s ease-in-out infinite;
+
+    .modak.correct {
+        animation: correctModak 0.6s ease;
+    }
+
+    @keyframes correctModak {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.4) rotate(10deg);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .modak.wrong {
+        animation: wrongModak 0.4s ease;
+    }
+
+    @keyframes wrongModak {
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-10px);
+        }
+
+        75% {
+            transform: translateX(10px);
+        }
+    }
+}
+
+@keyframes modakBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+}
+
+
+/* Puja item animation */
+.puja-item {
+    animation: pujaFloat 2s ease-in-out infinite;
+}
+
+@keyframes pujaFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* Final Ganesha animation */
+.ganesha-final {
+    font-size: 90px;
+    animation: ganeshaPop 1.5s ease-in-out infinite;
+}
+
+@keyframes ganeshaPop {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* Stars animation */
+.stars {
+    font-size: 30px;
+    animation: starsGlow 1s ease-in-out infinite;
+}
+
+@keyframes starsGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* Button pulse */
+#startBtn,
+#continueBtn,
+#playAgainBtn {
+    animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+}

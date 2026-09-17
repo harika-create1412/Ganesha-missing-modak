@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Ganesha's Missing Modak</title>
+</head>
+
+<body>
+    <div class="game-info">
+        ⭐ Score: <span id="score">0</span>
+        <span class="level-progress">Level: <span id="currentLevel">1</span>/3</span>
+        ⏱️ Time: <span id="timer">60</span>s
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+    </div>
+
+    <div class="start-screen">
+        <div class="ganesha">🐘</div>
+        <h1>
+            GANESHA'S <br>
+            MISSING MODAK 🍬
+        </h1>
+        <p class="subtile">
+            A Ganesh chaturthi Mystery
+        </p>
+        <P class="story">
+            The Special Modak is missing!<br>
+            Can you find it?
+        </P>
+        <button id="startBtn">▶️ START GAME</button>
+
+
+    </div>
+    <div class="story-screen">
+        <div class="ganesha">🐘</div>
+        <h2>THE MYSTERY BEGINS</h2>
+
+        <p>
+            Ganesh Chaturthi celebration is about to begin...
+        </p>
+
+        <p>
+            But the special Modak has disappeared! 🍬
+        </p>
+
+        <p>
+            Help Ganesha find it by completing
+            the festival challenges.
+        </p>
+
+        <h3>🔍 MISSION: Find the Missing Modak</h3>
+
+        <button id="continueBtn">CONTINUE →</button>
+
+    </div>
+    <div class="level1-screen">
+
+        <h2>🌺 LEVEL 1: FLOWER HUNT</h2>
+
+        <p>Collect 5 flowers for Ganesha's Puja!</p>
+
+        <h3>Flowers Collected: <span id="flowerScore">0</span>/5</h3>
+
+        <div class="flowers">
+            <button class="flower">🌺</button>
+            <button class="flower">🌸</button>
+            <button class="flower">🌼</button>
+            <button class="flower">🌻</button>
+            <button class="flower">🌷</button>
+        </div>
+
+        <p id="flowerMessage"></p>
+
+    </div>
+    <div class="level2-screen">
+
+        <h2>🍬 LEVEL 2: MODAK PUZZLE</h2>
+
+        <p>Find Ganesha's special Modak!</p>
+
+        <h3>Choose the correct Modak 👇</h3>
+
+        <div class="modak-container">
+            <button class="modak">🍬</button>
+            <button class="modak">🍭</button>
+            <button class="modak">🍬</button>
+            <button class="modak">🍡</button>
+            <button class="modak">🍬</button>
+        </div>
+
+        <p id="modakMessage"></p>
+
+    </div>
+    <div class="level3-screen">
+
+        <h2>🪔 LEVEL 3: FESTIVAL PUZZLE</h2>
+
+        <p>Arrange the Puja items in the correct order!</p>
+
+        <h3>Step 1 → Step 2 → Step 3</h3>
+
+        <div class="puja-items">
+
+            <button class="puja-item" data-order="2">
+                🌺<br>Flowers
+            </button>
+
+            <button class="puja-item" data-order="1">
+                🪔<br>Diya
+            </button>
+
+            <button class="puja-item" data-order="3">
+                🍬<br>Modak
+            </button>
+
+        </div>
+
+        <p id="pujaMessage"></p>
+
+    </div>
+    <div class="final-screen">
+
+        <div class="ganesha-final">🐘</div>
+
+        <h1>🎉 CONGRATULATIONS! 🎉</h1>
+
+        <h2>🍬 You Found the Missing Modak!</h2>
+
+        <p class="bappa">🙏 Ganapati Bappa Morya! 🙏</p>
+
+        <p>🌺 Happy Ganesh Chaturthi! 🪔</p>
+
+        <div class="stars">
+            ⭐ ⭐ ⭐
+        </div>
+
+        <button id="playAgainBtn">🔄 PLAY AGAIN</button>
+
+    </div>
+
+</body>
+
+</html>
